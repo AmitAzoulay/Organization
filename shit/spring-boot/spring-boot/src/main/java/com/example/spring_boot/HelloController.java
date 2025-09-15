@@ -1,6 +1,6 @@
 package com.example.spring_boot;
 
-import com.example.client.Patient;
+//import com.example.client.Patient;
 import java.io.ByteArrayInputStream;
 import java.io.ObjectInputStream;
 
@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Arrays;
-import java.util.Date;
-import java.util.UUID;
+import java.sql.*;
+import java.util.*;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 @RestController
 public class HelloController {
@@ -37,6 +37,6 @@ public class HelloController {
             return "Error deserializing patient: " + e.getMessage();
         }
 
-
     }
+
 }
